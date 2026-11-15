@@ -1,0 +1,85 @@
+@import url(./theme.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100dvh;
+  max-width: 768px;
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+.selectable-text,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+img.interactive {
+  pointer-events: auto;
+}
+
+@media (max-width: 40em) {
+  body {
+    padding: 1rem;
+  }
+}
